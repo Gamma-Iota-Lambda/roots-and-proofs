@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Roots & Proofs — Ticket Packages</title>
+  <meta name="description" content="Roots & Proofs — The Culture Amplified. Choose GA, Golden Experience, or VIP." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- If you have Gotham, use it locally. Otherwise Century Gothic (brand substitute) is set in CSS. -->
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="#top" aria-label="Roots & Proofs home">
+        <span class="brandmark" aria-hidden="true">ΑΦΑ</span>
+        <span class="brandtext">
+          <span class="brandtitle">Roots & Proofs</span>
+          <span class="brandsub">An Alpha Gold Experience</span>
+        </span>
+      </a>
+
+      <div class="navlinks">
+        <a href="#tickets">Tickets</a>
+        <a href="#details">Details</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-gold" href="#tickets">Get Tickets</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="kicker">ROOTS & PROOFS</p>
+          <h1>Celebrate flavor, fellowship, and the culture.</h1>
+          <p class="lead">
+            Choose your experience level — General Admission, Golden Experience, or VIP —
+            and enjoy curated tastings, specialty cocktails, and our annual Roots Toast.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn btn-gold" href="#tickets">View Ticket Packages</a>
+            <a class="btn btn-ghost" href="#details">Event Details</a>
+          </div>
+
+          <div class="hero-note">
+            <span class="dot"></span>
+            <span>
+              Tip: Replace the “ΑΦΑ” placeholder with your official crest/logo asset (SVG/PNG) when ready.
+            </span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="mini">
+            <div class="mini-row">
+              <span class="mini-label">Pricing tier</span>
+              <span class="mini-value" id="tierLabel">Early Bird</span>
+            </div>
+            <div class="mini-row">
+              <span class="mini-label">Best for</span>
+              <span class="mini-value">Groups, first-timers, and the full experience</span>
+            </div>
+            <div class="mini-divider"></div>
+            <div class="mini-row">
+              <span class="mini-label">Includes</span>
+              <span class="mini-value">Cups • Tastings • Wristbands • 1 Drink • Discount Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glow" aria-hidden="true"></div>
+    </section>
+
+    <section id="tickets" class="section">
+      <div class="section-head">
+        <h2>Ticket Packages</h2>
+        <p>Toggle the pricing tier — cards update automatically.</p>
+
+        <div class="tier-toggle" role="tablist" aria-label="Pricing tier toggle">
+          <button class="tier-btn is-active" data-tier="early" role="tab" aria-selected="true">Early Bird</button>
+          <button class="tier-btn" data-tier="general" role="tab" aria-selected="false">General</button>
+          <button class="tier-btn" data-tier="late" role="tab" aria-selected="false">Late Minute</button>
+        </div>
+      </div>
+
+      <div class="cards" id="ticketCards" aria-live="polite"></div>
+
+      <div class="cta-row">
+        <!-- Replace href with your Zeffy / Event link -->
+        <a class="btn btn-gold btn-wide" href="https://example.com" target="_blank" rel="noreferrer">
+          Get Tickets (Link Placeholder)
+        </a>
+        <p class="small">
+          Want a “scan the QR” block? Add your QR image in <code>/assets/qr.png</code> and I’ll wire it in.
+        </p>
+      </div>
+    </section>
+
+    <section id="details" class="section section-alt">
+      <div class="grid2">
+        <div class="panel">
+          <h3>What to Expect</h3>
+          <ul class="bullets">
+            <li>Entry windows vary by package (VIP/Golden early entry).</li>
+            <li>Curated tasting bites while supplies last.</li>
+            <li>Specialty cocktail sampling (Golden/VIP).</li>
+            <li>Annual Roots Toast at 9:00 PM (Golden/VIP).</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Quick Info</h3>
+          <div class="info">
+            <div class="info-row">
+              <span class="info-k">Doors</span>
+              <span class="info-v">VIP & Golden: 7:00 PM • GA: 9:00 PM</span>
+            </div>
+            <div class="info-row">
+              <span class="info-k">Dress</span>
+              <span class="info-v">Elevated / Cocktail</span>
+            </div>
+            <div class="info-row">
+              <span class="info-k">Perks</span>
+              <span class="info-v">Discount code to Happy Cork (all tiers)</span>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <p class="small">
+            Update this section with your venue address, date, and host line.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="section-head">
+        <h2>FAQ</h2>
+        <p>Common questions for guests.</p>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>What’s the difference between Golden Experience and VIP?</summary>
+          <div class="faq-body">
+            Golden includes early entry, specialty cocktails sampling (7–9), limited bar seating (7–9),
+            VIP check-in after 9, cocktail-making demo, and the Roots Toast.
+            VIP includes all of that plus extended limited bar seating (7 PM – 2 AM), upgraded cups,
+            swag bag, and reserved seating/private section.
+          </div>
+        </details>
+
+        <details>
+          <summary>Do all tickets include tasting bites and a complimentary drink?</summary>
+          <div class="faq-body">
+            Yes — all tiers include tasting bites (while supplies last) and one complimentary drink.
+          </div>
+        </details>
+
+        <details>
+          <summary>Can I upgrade at the door?</summary>
+          <div class="faq-body">
+            If upgrades are available, staff can assist. We recommend purchasing your desired tier in advance.
+          </div>
+        </details>
+      </div>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <div>
+            <div class="footer-title">Roots & Proofs</div>
+            <div class="footer-sub">Alpha Gold • Black • Clean typography</div>
+          </div>
+          <div class="footer-right">
+            <a href="#tickets">Tickets</a>
+            <a href="#details">Details</a>
+            <a href="#top">Back to top</a>
+          </div>
+        </div>
+        <div class="legal">
+          <span>© <span id="year"></span> Roots & Proofs.</span>
+          <span class="sep">•</span>
+          <span>Hosted on GitHub Pages.</span>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
