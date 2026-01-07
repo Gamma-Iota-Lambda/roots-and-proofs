@@ -48,12 +48,24 @@ code{color:var(--blonde)}
   gap: 16px;
 }
 
+.logo{
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 .brand{
   display:flex;
   align-items:center;
   gap: 12px;
   min-width: 240px;
 }
+
+.brand:hover .logo{
+  filter: drop-shadow(0 0 6px rgba(184,134,11,.35));
+}
+
 .brandmark{
   width: 44px; height: 44px;
   border-radius: 12px;
