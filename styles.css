@@ -409,6 +409,68 @@ code{color:var(--blonde)}
     z-index: 40;
   }
 }
+/* --- Mobile polish: header/nav --- */
+@media (max-width: 600px){
+  .nav{
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Let brand take full row if needed */
+  .brand{
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  /* Make the nav links sit nicely and avoid awkward breaks */
+  .navlinks{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+
+  /* Slightly smaller link text so “Tickets / Details / Disclaimer” stays clean */
+  .navlinks a{
+    font-size: 13px;
+  }
+
+  /* Keep the CTA button from breaking into two lines */
+  .navlinks .btn{
+    padding: 10px 14px;
+    white-space: nowrap;
+  }
+}
+/* --- Mobile polish: Event Info panel --- */
+@media (max-width: 600px){
+  /* Make each row a tidy 2-column layout */
+  .info-row{
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    align-items: start;
+    column-gap: 14px;
+  }
+
+  .info-k{
+    font-size: 13px;
+    line-height: 1.25;
+  }
+
+  .info-v{
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  /* Long links (maps + website) wrap nicely instead of looking broken */
+  .info-v a{
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
+}
 
 .notice{
   margin-top: 12px;
@@ -449,11 +511,11 @@ code{color:var(--blonde)}
 .info-v a,
 .eventv a{
   color: rgba(250,240,190,.95);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(250,240,190,.55);
+  padding-bottom: 2px;
 }
 .info-v a:hover,
 .eventv a:hover{
-  opacity: .85;
+  border-bottom-color: rgba(250,240,190,.80);
 }
-
