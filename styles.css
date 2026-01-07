@@ -1,9 +1,7 @@
 :root{
-  /* Brand-forward (digital) */
   --alpha-gold: #B8860B; /* Dark Golden Rod */
   --black: #000000;
 
-  /* Supporting neutrals */
   --ink: #0B0B0B;
   --card: #111111;
   --muted: #DAD3CC;
@@ -54,7 +52,7 @@ code{color:var(--blonde)}
   display:flex;
   align-items:center;
   gap: 12px;
-  min-width: 220px;
+  min-width: 240px;
 }
 .brandmark{
   width: 44px; height: 44px;
@@ -63,9 +61,9 @@ code{color:var(--blonde)}
   background: rgba(184,134,11,.18);
   border: 1px solid rgba(184,134,11,.40);
   color: var(--blonde);
-  font-weight: 700;
+  font-weight: 800;
 }
-.brandtitle{display:block; font-weight:700; letter-spacing:.6px}
+.brandtitle{display:block; font-weight:800; letter-spacing:.6px}
 .brandsub{display:block; color: rgba(218,211,204,.85); font-size: 12px; margin-top: 2px}
 
 .navlinks{
@@ -99,9 +97,9 @@ code{color:var(--blonde)}
   border: 1px solid rgba(184,134,11,.35);
   background: rgba(184,134,11,.10);
   color: var(--blonde);
-  font-weight: 700;
+  font-weight: 800;
   font-size: 12px;
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
 }
 .hero-copy h1{
   margin: 14px 0 10px;
@@ -112,7 +110,7 @@ code{color:var(--blonde)}
   color: rgba(218,211,204,.92);
   font-size: 16px;
   line-height: 1.6;
-  max-width: 62ch;
+  max-width: 66ch;
 }
 .hero-cta{display:flex; gap: 10px; flex-wrap: wrap; margin-top: 18px}
 .hero-note{
@@ -130,6 +128,34 @@ code{color:var(--blonde)}
   box-shadow: 0 0 0 6px rgba(184,134,11,.12);
 }
 
+.eventbar{
+  margin-top: 14px;
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.eventpill{
+  border-radius: 999px;
+  border: 1px solid rgba(218,211,204,.18);
+  background: rgba(17,17,17,.40);
+  padding: 10px 12px;
+  display:flex;
+  gap: 10px;
+  align-items:baseline;
+}
+.eventk{
+  color: rgba(218,211,204,.70);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+}
+.eventv{
+  color: rgba(250,240,190,.95);
+  font-size: 13px;
+  font-weight: 750;
+}
+
 .hero-card{
   border-radius: var(--radius);
   background: rgba(17,17,17,.78);
@@ -141,8 +167,8 @@ code{color:var(--blonde)}
   display:flex; justify-content:space-between; gap: 14px;
   padding: 10px 0;
 }
-.mini-label{color: rgba(218,211,204,.78); font-size: 13px}
-.mini-value{font-weight: 650; font-size: 13px; text-align:right}
+.mini-label{color: rgba(218,211,204,.78); font-size: 13px; font-weight: 700}
+.mini-value{font-weight: 650; font-size: 13px; text-align:right; color: rgba(250,240,190,.92)}
 .mini-divider{
   height: 1px;
   background: rgba(218,211,204,.18);
@@ -170,32 +196,9 @@ code{color:var(--blonde)}
 .section-head h2{margin:0; font-size: 26px}
 .section-head p{margin:0; color: rgba(218,211,204,.85)}
 
-.tier-toggle{
-  display:flex;
-  gap: 8px;
-  border: 1px solid rgba(218,211,204,.16);
-  background: rgba(17,17,17,.5);
-  padding: 6px;
-  border-radius: 999px;
-}
-.tier-btn{
-  border: 0;
-  background: transparent;
-  color: rgba(218,211,204,.92);
-  padding: 10px 12px;
-  border-radius: 999px;
-  font-weight: 650;
-  cursor:pointer;
-  font-size: 13px;
-}
-.tier-btn.is-active{
-  background: linear-gradient(180deg, rgba(184,134,11,.95), rgba(184,134,11,.75));
-  color: #000;
-}
-
 .cards{
   display:grid;
-  grid-template-columns: repeat(3, minmax(0,1fr));
+  grid-template-columns: repeat(4, minmax(0,1fr));
   gap: 14px;
   margin-top: 10px;
 }
@@ -224,12 +227,12 @@ code{color:var(--blonde)}
   border: 1px solid rgba(184,134,11,.35);
   color: var(--blonde);
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: .8px;
 }
 .card h3{
   margin: 12px 0 6px;
-  font-size: 22px;
+  font-size: 20px;
 }
 .sub{
   margin: 0;
@@ -245,7 +248,7 @@ code{color:var(--blonde)}
 }
 .price .amount{
   font-size: 34px;
-  font-weight: 800;
+  font-weight: 900;
   color: var(--blonde);
 }
 .price .tier{
@@ -310,7 +313,7 @@ code{color:var(--blonde)}
   gap: 10px;
   border-radius: 999px;
   padding: 12px 14px;
-  font-weight: 750;
+  font-weight: 800;
   border: 1px solid rgba(218,211,204,.20);
   background: rgba(255,255,255,.06);
   color: rgba(255,255,255,.95);
@@ -356,25 +359,10 @@ code{color:var(--blonde)}
 .info-k{color: rgba(218,211,204,.70)}
 .divider{height:1px; background: rgba(218,211,204,.16); margin: 14px 0}
 
-.faq{
-  display:grid;
-  gap: 10px;
-}
-details{
-  border-radius: var(--radius);
-  border: var(--stroke);
-  background: rgba(17,17,17,.62);
-  padding: 14px 16px;
-}
-summary{
-  cursor:pointer;
-  font-weight: 750;
-  color: rgba(250,240,190,.95);
-}
-.faq-body{
-  margin-top: 10px;
+.legalcopy{
+  margin: 0;
   color: rgba(218,211,204,.92);
-  line-height: 1.65;
+  line-height: 1.7;
   font-size: 14px;
 }
 
@@ -390,7 +378,7 @@ summary{
   gap: 12px;
   flex-wrap: wrap;
 }
-.footer-title{font-weight: 850; letter-spacing: .6px}
+.footer-title{font-weight: 900; letter-spacing: .6px}
 .footer-sub{color: rgba(218,211,204,.75); font-size: 13px}
 .footer-right{display:flex; gap: 12px; color: rgba(218,211,204,.85); font-size: 14px}
 .legal{
@@ -403,6 +391,9 @@ summary{
 }
 .sep{opacity:.6}
 
+@media (max-width: 1100px){
+  .cards{grid-template-columns: repeat(2, minmax(0,1fr));}
+}
 @media (max-width: 980px){
   .hero-inner{grid-template-columns: 1fr; }
   .cards{grid-template-columns: 1fr; }
