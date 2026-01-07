@@ -4,7 +4,7 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 const cardsRoot = document.getElementById("ticketCards");
 
 // Replace with your Zeffy / ticket link (or keep one universal link).
-const TICKET_LINK = "https://example.com";
+const TICKET_LINK = "https://www.zeffy.com/en-US/ticketing/roots-and-proofs";
 
 // Helper formatting
 function money(n){
