@@ -67,6 +67,7 @@ const DATA = [
     cta: { label: "Get Final Call", href: TICKET_LINK },
     features: GA_BENEFITS
   },
+  /*
   {
     key: "golden_experience",
     name: "Golden Experience",
@@ -120,7 +121,7 @@ const DATA = [
       "Exclusive branded swag bag",
       "All section ticket purchases are tax-deductible"
     ]
-  }
+  }*/
 ];
 
 function render(){
