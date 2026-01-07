@@ -445,3 +445,15 @@ code{color:var(--blonde)}
   opacity: .75;
   pointer-events: none;
 }
+
+.info-v a,
+.eventv a{
+  color: rgba(250,240,190,.95);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.info-v a:hover,
+.eventv a:hover{
+  opacity: .85;
+}
+
