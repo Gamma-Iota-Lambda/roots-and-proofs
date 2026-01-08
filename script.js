@@ -22,19 +22,17 @@ const DATA = [
     name: "General Admission (GA)",
     badge: "GENERAL ADMISSION",
     popular: true,
-    price: 50,
+    price: 30,
     metaLeft: "Entry: 9:00 PM",
     metaRight: "Includes GA perks",
     description:
       "Your standard entry ticket provides access to the full experience beginning at 9:00 PM.",
     cta: { label: "Buy now", href: TICKET_LINK },
     features: [
-      "Entry at 9:00 PM",
       "One complimentary drink",
       "Tasting bites (while supplies last)",
       "Customized event cup",
       "Complimentary wristband",
-      "Exclusive Happy Cork discount code (valid for one week beginning the night of the event)",
       "All tickets are tax-deductible"
     ]
   },
@@ -43,25 +41,19 @@ const DATA = [
     name: "Golden Experience",
     badge: "VIP ADD-ON",
     popular: false,
-    price: 30,
+    price: 60,
     metaLeft: "Add-on (requires GA)",
     metaRight: "Early entry: 7–9 PM",
     description:
       "An add-on that must be paired with a General Admission ticket. Unlock early entry and VIP-only experiences, plus guaranteed access to the 9 PM Roots Toast.",
-    notice: {
-      type: "warn",
-      text:
-        "Important: This is an add-on and does not guarantee entry. You must also purchase General Admission to enter."
-    },
     cta: { label: "Buy now", href: TICKET_LINK },
     features: [
-      "Early entry from 7:00–9:00 PM",
       "VIP-only specialty cocktails sampling (7:00–9:00 PM)",
       "Priority check-in",
       "Access to limited bar seating (7:00–9:00 PM)",
       "Live cocktail-making demo",
       "Guaranteed participation in the 9 PM Annual Roots Toast",
-      "Includes all GA perks when paired with admission",
+      "Includes all GA perks",
       "All tickets are tax-deductible"
     ]
   },
@@ -78,7 +70,6 @@ const DATA = [
     cta: { label: "Buy now", href: TICKET_LINK },
     features: [
       "Includes 7 tickets",
-      "Early entry at 7:00 PM",
       "VIP priority check-in",
       "Private reserved section with guaranteed seating all night",
       "Upgraded customized cups",
