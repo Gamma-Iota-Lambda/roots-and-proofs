@@ -23,7 +23,7 @@ const DATA = [
     badge: "GENERAL ADMISSION",
     popular: true,
     price: 30,
-    metaLeft: "Entry: 9:00 PM",
+    metaRight: "Entry: 9:00 PM",
     description:
       "Your standard entry ticket provides access to the full experience beginning at 9:00 PM.",
     cta: { label: "Buy now", href: TICKET_LINK },
