@@ -251,7 +251,6 @@ function render(){
           <a class="btn ${ctaClass}" href="${ctaHref}" ${ctaAttrs}>
             ${pkg.cta.label}
           </a>
-          <a class="btn btn-ghost" href="#details">Event Details</a>
         </div>
       </article>
     `;
