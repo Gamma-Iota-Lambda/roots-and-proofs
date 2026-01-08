@@ -199,7 +199,7 @@ code{color:var(--blonde)}
 }
 
 .section{
-  max-width: 1120px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 34px 18px;
 }
@@ -221,7 +221,7 @@ code{color:var(--blonde)}
 
 .cards{
   display:grid;
-  grid-template-columns: repeat(4, minmax(0,1fr));
+  grid-template-columns: repeat(3, minmax(0,1fr));
   gap: 14px;
   margin-top: 10px;
 }
