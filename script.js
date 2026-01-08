@@ -24,7 +24,6 @@ const DATA = [
     popular: true,
     price: 30,
     metaLeft: "Entry: 9:00 PM",
-    metaRight: "Includes GA perks",
     description:
       "Your standard entry ticket provides access to the full experience beginning at 9:00 PM.",
     cta: { label: "Buy now", href: TICKET_LINK },
@@ -32,8 +31,7 @@ const DATA = [
       "One complimentary drink",
       "Tasting bites (while supplies last)",
       "Customized event cup",
-      "Complimentary wristband",
-      "All tickets are tax-deductible"
+      "Complimentary wristband"
     ]
   },
   {
@@ -42,19 +40,17 @@ const DATA = [
     badge: "VIP ADD-ON",
     popular: false,
     price: 60,
-    metaLeft: "Add-on (requires GA)",
     metaRight: "Early entry: 7–9 PM",
     description:
-      "An add-on that must be paired with a General Admission ticket. Unlock early entry and VIP-only experiences, plus guaranteed access to the 9 PM Roots Toast.",
+      "Unlock early entry and VIP-only experiences, plus guaranteed access to the 9 PM Roots Toast.",
     cta: { label: "Buy now", href: TICKET_LINK },
     features: [
+      "Includes all GA perks",
       "VIP-only specialty cocktails sampling (7:00–9:00 PM)",
       "Priority check-in",
       "Access to limited bar seating (7:00–9:00 PM)",
       "Live cocktail-making demo",
-      "Guaranteed participation in the 9 PM Annual Roots Toast",
-      "Includes all GA perks",
-      "All tickets are tax-deductible"
+      "Guaranteed participation in the 9 PM Annual Roots Toast"
     ]
   },
   {
@@ -63,12 +59,12 @@ const DATA = [
     badge: "SECTION",
     popular: false,
     price: 500,
-    metaLeft: "Group ticket (includes 7)",
     metaRight: "Entry: 7:00 PM",
     description:
       "The most elevated way to experience Roots & Proofs — private reserved section with guaranteed seating, early entry, and full VIP perks.",
     cta: { label: "Buy now", href: TICKET_LINK },
     features: [
+      "Includes all Golden Experience perks",
       "Includes 7 tickets",
       "VIP priority check-in",
       "Private reserved section with guaranteed seating all night",
@@ -79,8 +75,7 @@ const DATA = [
       "Specialty cocktails sampling (7:00–9:00 PM)",
       "Access to the cocktail-making demo",
       "Guaranteed participation in the 9 PM Annual Roots Toast",
-      "Branded swag bag",
-      "All section ticket purchases are tax-deductible"
+      "Branded swag bag"
     ]
   }
 ];
