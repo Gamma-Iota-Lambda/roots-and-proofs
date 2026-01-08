@@ -124,7 +124,7 @@ const DATA = [
   }*/
 ];
 
-function render(){
+/*function render(){
   if (!cardsRoot) return;
 
   cardsRoot.innerHTML = DATA.map(pkg => {
@@ -182,4 +182,57 @@ function render(){
   }).join("");
 }
 
-render();
+render(); */
+const gridRoot = document.getElementById("ticketGrid");
+
+const TICKET_GRID = {
+  columns: ["General Admission (GA)", "Golden Experience", "VIP"],
+  rows: [
+    { label: "Early Bird Price", values: ["$30.00", "$60.00", "$500.00"] },
+    { label: "General Admin Price", values: ["$50.00", "$80.00", "$500.00"] },
+    { label: "Late Minute Price", values: ["$60.00", "$90.00", "$500.00"] },
+    { label: "Entry Time", values: ["9:00 PM", "7:00 PM", "7:00 PM"] },
+    { label: "Customized Cups", values: ["Yes", "Yes", "Yes (Upgraded Cups)"] },
+    { label: "Tasting Bites (while supplies last)", values: ["Yes", "Yes", "Yes"] },
+    { label: "Complimentary Wristbands", values: ["Yes", "Yes", "Yes"] },
+    { label: "One complimentary drink", values: ["Yes", "Yes", "Yes"] },
+    { label: "Exclusive Discount Code to Happy Cork", values: ["Yes", "Yes", "Yes"] },
+    { label: "VIP priority check-in after 9 PM", values: ["No", "Yes", "Yes"] },
+    { label: "Priority check-in after 9 PM", values: ["No", "Yes", "Yes"] },
+    { label: "Access to Limited Bar Seating", values: ["No", "Yes - 7:00 PM - 9:00 PM", "Yes - 7:00 PM - 2:00 AM"] },
+    { label: "Specialty Cocktails (between 7-9) Sampling", values: ["No", "Yes", "Yes"] },
+    { label: "VIP Cocktail-Making Demo", values: ["No", "Yes", "Yes"] },
+    { label: "Annual Roots Toast (9 PM)", values: ["No", "Yes", "Yes"] },
+    { label: "Branded Gift Bag", values: ["No", "No", "Swag Bag"] },
+    { label: "Reserved Seating / Private Section", values: ["No", "No", "Yes"] }
+  ]
+};
+
+function renderTicketGrid(){
+  if (!gridRoot) return;
+
+  const headerCols = TICKET_GRID.columns.map(c => `<th>${c}</th>`).join("");
+
+  const bodyRows = TICKET_GRID.rows.map(r => {
+    const tds = r.values.map(v => `<td>${v}</td>`).join("");
+    return `<tr><th class="rowhead">${r.label}</th>${tds}</tr>`;
+  }).join("");
+
+  gridRoot.innerHTML = `
+    <div class="ticket-grid-wrap">
+      <table class="ticket-grid" role="table" aria-label="Ticket package comparison">
+        <thead>
+          <tr>
+            <th class="corner">Ticker Prices</th>
+            ${headerCols}
+          </tr>
+        </thead>
+        <tbody>
+          ${bodyRows}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+renderTicketGrid();
