@@ -555,67 +555,106 @@ code{color:var(--blonde)}
   padding: 28px;
 }
 
-/* --- Ticket comparison grid (table) --- */
+/* --- Ticket comparison grid (themed) --- */
 .ticket-grid-wrap{
   margin-top: 14px;
-  overflow-x: auto;              /* mobile scroll if needed */
+  overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  border-radius: 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(218,211,204,.16);
+  background: rgba(17,17,17,.40);
+  box-shadow: var(--shadow);
+  padding: 10px;
 }
 
 .ticket-grid{
   width: 100%;
-  min-width: 920px;              /* forces horizontal scroll on small screens */
-  border-collapse: collapse;
-  background: #fff;
-  color: #000;
-  border: 2px solid #000;
-  font-family: Arial, Helvetica, sans-serif;
+  min-width: 920px;                 /* keep horizontal scroll on small screens */
+  border-collapse: separate;
+  border-spacing: 0;
+  background: rgba(0,0,0,.35);
+  color: rgba(255,255,255,.92);
+  border-radius: 14px;
+  overflow: hidden;
+  font-family: "Century Gothic", "Gotham", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
+/* Base cell styling */
 .ticket-grid th,
 .ticket-grid td{
-  border: 2px solid #000;
-  padding: 10px 10px;
-  font-size: 14px;
-  line-height: 1.2;
+  padding: 12px 12px;
+  font-size: 13px;
+  line-height: 1.25;
   vertical-align: middle;
+  border-right: 1px solid rgba(218,211,204,.16);
+  border-bottom: 1px solid rgba(218,211,204,.16);
 }
 
+/* Remove last column border-right */
+.ticket-grid tr > *:last-child{
+  border-right: none;
+}
+
+/* Header row (gold) */
 .ticket-grid thead th{
-  font-weight: 800;
+  position: sticky;
+  top: 0;
+  z-index: 2;
   text-align: center;
-  font-size: 16px;
-  padding: 12px 10px;
+  font-weight: 900;
+  letter-spacing: .4px;
+  color: #000;
+  background: linear-gradient(180deg, rgba(184,134,11,1), rgba(184,134,11,.78));
+  border-bottom: 1px solid rgba(0,0,0,.35);
 }
 
-.ticket-grid .corner{
-  text-align: center;
+/* Top-left corner header */
+.ticket-grid thead th.corner{
+  text-align: left;
+}
+
+/* Row headers (left column) */
+.ticket-grid .rowhead{
+  font-weight: 800;
+  color: rgba(250,240,190,.95);
+  text-align: left;
+  background: rgba(17,17,17,.55);
   width: 36%;
 }
 
-.ticket-grid .rowhead{
-  font-weight: 600;
-  text-align: left;
-  white-space: nowrap;
-}
-
+/* Data cells */
 .ticket-grid tbody td{
   text-align: center;
-  font-weight: 600;
+  font-weight: 650;
+  color: rgba(255,255,255,.92);
 }
 
-/* Make first column wrap nicely if needed */
+/* Zebra striping for readability */
+.ticket-grid tbody tr:nth-child(odd) td{
+  background: rgba(17,17,17,.30);
+}
+.ticket-grid tbody tr:nth-child(even) td{
+  background: rgba(17,17,17,.18);
+}
+
+/* Make "Yes" pop subtly without changing your data */
+.ticket-grid tbody td{
+  white-space: nowrap;
+}
 .ticket-grid .rowhead{
   white-space: normal;
 }
 
-/* Optional: keep header visible when scrolling (nice on desktop) */
-.ticket-grid thead th{
-  position: sticky;
-  top: 0;
-  background: #fff;
-  z-index: 1;
+/* Rounded corners */
+.ticket-grid thead tr th:first-child{ border-top-left-radius: 14px; }
+.ticket-grid thead tr th:last-child{ border-top-right-radius: 14px; }
+.ticket-grid tbody tr:last-child th.rowhead{ border-bottom-left-radius: 14px; }
+.ticket-grid tbody tr:last-child td:last-child{ border-bottom-right-radius: 14px; }
+
+/* Optional: subtle hover to help scanning */
+.ticket-grid tbody tr:hover td,
+.ticket-grid tbody tr:hover th.rowhead{
+  background: rgba(184,134,11,.10);
 }
 
 .ticket-grid-wrap{
