@@ -223,7 +223,7 @@ function renderTicketGrid(){
       <table class="ticket-grid" role="table" aria-label="Ticket package comparison">
         <thead>
           <tr>
-            <th class="corner">Ticker Prices</th>
+            <th class="corner">Ticket Prices</th>
             ${headerCols}
           </tr>
         </thead>
