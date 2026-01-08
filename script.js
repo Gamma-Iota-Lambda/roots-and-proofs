@@ -16,8 +16,85 @@ function iconChar(type){
   return "✓";
 }
 
+const DATA = [
+  {
+    key: "ga",
+    name: "General Admission (GA)",
+    badge: "GENERAL ADMISSION",
+    popular: true,
+    price: 50,
+    metaLeft: "Entry: 9:00 PM",
+    metaRight: "Includes GA perks",
+    description:
+      "Your standard entry ticket provides access to the full experience beginning at 9:00 PM.",
+    cta: { label: "Buy now", href: TICKET_LINK },
+    features: [
+      "Entry at 9:00 PM",
+      "One complimentary drink",
+      "Tasting bites (while supplies last)",
+      "Customized event cup",
+      "Complimentary wristband",
+      "Exclusive Happy Cork discount code (valid for one week beginning the night of the event)",
+      "All tickets are tax-deductible"
+    ]
+  },
+  {
+    key: "golden",
+    name: "Golden Experience",
+    badge: "VIP ADD-ON",
+    popular: false,
+    price: 30,
+    metaLeft: "Add-on (requires GA)",
+    metaRight: "Early entry: 7–9 PM",
+    description:
+      "An add-on that must be paired with a General Admission ticket. Unlock early entry and VIP-only experiences, plus guaranteed access to the 9 PM Roots Toast.",
+    notice: {
+      type: "warn",
+      text:
+        "Important: This is an add-on and does not guarantee entry. You must also purchase General Admission to enter."
+    },
+    cta: { label: "Buy now", href: TICKET_LINK },
+    features: [
+      "Early entry from 7:00–9:00 PM",
+      "VIP-only specialty cocktails sampling (7:00–9:00 PM)",
+      "Priority check-in",
+      "Access to limited bar seating (7:00–9:00 PM)",
+      "Live cocktail-making demo",
+      "Guaranteed participation in the 9 PM Annual Roots Toast",
+      "Includes all GA perks when paired with admission",
+      "All tickets are tax-deductible"
+    ]
+  },
+  {
+    key: "vip",
+    name: "VIP",
+    badge: "SECTION",
+    popular: false,
+    price: 500,
+    metaLeft: "Group ticket (includes 7)",
+    metaRight: "Entry: 7:00 PM",
+    description:
+      "The most elevated way to experience Roots & Proofs — private reserved section with guaranteed seating, early entry, and full VIP perks.",
+    cta: { label: "Buy now", href: TICKET_LINK },
+    features: [
+      "Includes 7 tickets",
+      "Early entry at 7:00 PM",
+      "VIP priority check-in",
+      "Private reserved section with guaranteed seating all night",
+      "Upgraded customized cups",
+      "Tasting bites (while supplies last)",
+      "One complimentary drink",
+      "Specialty cocktails sampling (7:00–9:00 PM)",
+      "Access to the cocktail-making demo",
+      "Guaranteed participation in the 9 PM Annual Roots Toast",
+      "Branded swag bag",
+      "All section ticket purchases are tax-deductible"
+    ]
+  }
+];
+
 // Shared GA benefits (used for Pour tickets)
-const GA_BENEFITS = [
+/*const GA_BENEFITS = [
   "Entry at 9:00 PM",
   "One complimentary drink",
   "Tasting bites (while supplies last)",
@@ -67,7 +144,6 @@ const DATA = [
     cta: { label: "Get Final Call", href: TICKET_LINK },
     features: GA_BENEFITS
   },
-  /*
   {
     key: "golden_experience",
     name: "Golden Experience",
@@ -121,10 +197,10 @@ const DATA = [
       "Exclusive branded swag bag",
       "All section ticket purchases are tax-deductible"
     ]
-  }*/
-];
+  }
+];*/
 
-/*function render(){
+function render(){
   if (!cardsRoot) return;
 
   cardsRoot.innerHTML = DATA.map(pkg => {
@@ -182,8 +258,9 @@ const DATA = [
   }).join("");
 }
 
-render(); */
-const gridRoot = document.getElementById("ticketGrid");
+render();
+
+/*const gridRoot = document.getElementById("ticketGrid");
 
 const TICKET_GRID = {
   columns: ["General Admission (GA)", "Golden Experience", "VIP"],
@@ -236,3 +313,4 @@ function renderTicketGrid(){
 }
 
 renderTicketGrid();
+*/
