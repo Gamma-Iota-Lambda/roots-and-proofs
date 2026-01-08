@@ -84,6 +84,7 @@ const DATA = [
       "Upgraded customized cups",
       "Tasting bites (while supplies last)",
       "One complimentary drink",
+      "Complimentary Wristbands",
       "Specialty cocktails sampling (7:00–9:00 PM)",
       "Access to the cocktail-making demo",
       "Guaranteed participation in the 9 PM Annual Roots Toast",
