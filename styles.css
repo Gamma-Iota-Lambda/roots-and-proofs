@@ -542,3 +542,15 @@ code{color:var(--blonde)}
 .eventv a:hover{
   border-bottom-color: rgba(250,240,190,.80);
 }
+
+#details{
+  max-width: 1320px;
+}
+
+#details .grid2{
+  column-gap: 24px;
+}
+
+#details .panel{
+  padding: 28px;
+}
